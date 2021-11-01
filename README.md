@@ -1,16 +1,16 @@
 # Bayesian Calculation Program Guide for COMBMORC 2021
-## I. Installing the required packages
+## I. Installing R and the required packages
 You can get the R interpreter from here: https://cran.r-project.org/
 
 You also should install the R Studio IDE: https://www.rstudio.com/
 
 Before you can run the software, you must install these packages in R:
-*mvtnorm
-*shiny
-*rgdal
-*sp
-*raster
-*RColorBrewer
+* mvtnorm
+* shiny
+* rgdal
+* sp
+* raster
+* RColorBrewer
 
 Use command
 ```R 
