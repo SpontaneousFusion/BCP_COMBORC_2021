@@ -1,8 +1,28 @@
 # Bayesian Calculation Program Guide for COMBMORC 2021
-## I. Running the software:
+## I. Installing the required packages
+You can get the R interpreter from here: https://cran.r-project.org/
+
+You also should install the R Studio IDE: https://www.rstudio.com/
+
+Before you can run the software, you must install these packages in R:
+*mvtnorm
+*shiny
+*rgdal
+*sp
+*raster
+*RColorBrewer
+
+Use command
+```R 
+install.packages("mvtnorm")
+```
+to install the packages. You may need to download additional libraries to be able to compile some parts of the packages. There is plenty of information on the internet for every kind of operating system.
+
+## II. Running the software:
 
 You will need to open the app.R file:
 ![image](https://user-images.githubusercontent.com/30175279/139648977-22e938e1-c402-40cc-8265-8310dac1eee3.png)
+
 
 The app.R file will open in the document viewer of the Rstudio. To run the app you need to press the “Run App” button:
 ![image](https://user-images.githubusercontent.com/30175279/139648998-0d609365-8347-4145-8803-ba6a0ce32753.png)
@@ -13,11 +33,11 @@ A new window should pop up:
 
 This is the main window of the calculation program. You will use the window to upload the files, change the parameters and run the Bayesian calculations. The program is divided in to three separate sections: (i) Data input, (ii) Data generation and (iii) Reconstruction. Each section has representative input tabs on the gray portion of the screen on the left, and output tabs, on the white portion of the screen on the right.
 
-## II. Uploading data
+## III. Uploading data
 To upload the data, choose the file type you will use, either CSV or NBL. Then, upload files accordingly. After the required files are uploaded, press the big “Process” button to store the data in the memory.
 You can use the data selection slider to select the data range, which will be used in Bayesian calculations. The selected range will automatically be used. There are no buttons to confirm the selected range (you can leave the setting and go to different tab).
 
-## III. Data generation
+## IV. Data generation
 There is a possibility to generate mobile gamma spectrometry data using the Generate tab:
 ![image](https://user-images.githubusercontent.com/30175279/139649066-3be78a69-af07-45b1-96be-5c5f2da37c11.png)
 
@@ -28,7 +48,7 @@ you need to input the position of the source, activity, background count rate, s
 
 The efficiency of the detector set here is used only for data generation. Also, not that the efficiency is used only to evaluate the count-rate from the source. The background count-rate is given separately. In reality, if the efficiency is increased twice, the background count-rate would also increase twice. To obtain data for the same situation but different efficiency, the background count-rate has to be adjusted manually accordingly.
 
-## IV. Bayesian calculations
+## V. Bayesian calculations
 The reconstruction tab allows to run the Bayesian reconstruction using MCMC algorithm. The settings regarding the in the Reconstruction tab:
 ![image](https://user-images.githubusercontent.com/30175279/139649095-90995da0-bfd3-4f17-9ade-38349ec8095b.png)
 
@@ -56,7 +76,7 @@ As a checkup, the fit of the data is displayed below the posterior distributions
 
 
 
-## V. After a crash
+## VI. After a crash
 If for some reason the program crashes, make sure that the R session is ready first, before running the app again.
 ![image](https://user-images.githubusercontent.com/30175279/139649151-eb8afb0e-0d1a-4d69-9038-dd2fc6e4014f.png)
 
